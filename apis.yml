@@ -1,25 +1,63 @@
 aid: current-surgical
+
 name: Current Surgical
-description: 'Current Surgical is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by true-ventures) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Current Surgical develops a digital surgery platform that combines real‑time imaging, precision focused ultrasound and AI‑driven algorithms to enable millimeter‑level control of tissue treatment. The technology is aimed at surgeons and medical facilities for applications such as solid tumor ablation, cardiac arrhythmias, chronic pain, hypertension and epilepsy. By providing closed‑loop control and automated precision, the platform seeks to improve outcomes and reduce risk in minimally invasive procedures.'
+
 url: https://raw.githubusercontent.com/api-evangelist/current-surgical/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- Surgery
+- Medical Devices
+- Focused Ultrasound
+- Digital Surgery
+- Minimally Invasive Surgery
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- true-ventures
+
 common:
+- type: Hosts
+  url: hosts/current-surgical-hosts.yml
+- type: Vendors
+  url: vendors/current-surgical-vendors.yml
+- type: DomainSecurity
+  url: security/current-surgical-domain-security.yml
 - type: Website
   url: https://currentsurgical.com
+
+apis: []
+
+x-backed-by:
+- true-ventures
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: No public API documentation or machine-readable contract was found for Current Surgical.
+  evidence:
+    - url: https://developer.current-surgical.com
+      status: 404
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
